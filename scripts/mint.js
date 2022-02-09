@@ -7,12 +7,13 @@ async function mint() {
     let abi = JSON.parse(file);
     abi = abi.abi;
     const fairuz = await new ethers.Contract(
-        "0x7994A2cd8C290dF0D6651Ce11f8c58A4889fb3AB",
+        "0x0b10eb97bcad9cf117053550b529e75c19e57b32",
         abi,
         signer);
     await fairuz.safeMint("0x44b606F8B35dDb417A18200fc58948b8950D5d16",
-        "https://gateway.pinata.cloud/ipfs/QmT3xkBwpBLHbvYyC3n8Epoht66WM1XFYV9B1sNNYq4Z7G"
+        "https://gateway.pinata.cloud/ipfs/QmQPpVJTetLvMUx94u5PtHAHXbwHDWYLu4X1ZukAKyjS1u/1.json"
     );
+    console.log("minted!")
 }
 
 mint()
